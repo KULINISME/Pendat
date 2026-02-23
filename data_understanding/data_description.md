@@ -35,10 +35,10 @@ Pada iris flower datasets didapatkan 5 attribute, sebagai berikut:
 4. petal_width(numerik)
 5. species(kategori)
 
-![Grafik Data](../image/datadesc.png)
+![Grafik Data](../image/datadesc.PNG)
 
 Kita ambil sampel dari salah satu attribute tersebut yaitu sepal_width kita bedah lebih detail
-![Grafik Data](../image/description.png)
+![Grafik Data](../image/description.PNG)
 
 Implementasi dari Python:
 ```{code-cell} 

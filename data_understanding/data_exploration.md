@@ -21,7 +21,7 @@ Dalam histogram, sumbu horizontal (X) menunjukkan rentang nilai atau interval da
 
 
 
-```{figure} ../image/hist_spl.png
+```{figure} ../image/hist_spl.PNG
 ---
 width: 60%
 align: center
@@ -29,7 +29,7 @@ align: center
 Histogram Distribusi Frekuensi Fitur sepal_length
 ```
 
-```{figure} ../image/hist_spw.png
+```{figure} ../image/hist_spw.PNG
 ---
 width: 60%
 align: center
@@ -37,7 +37,7 @@ align: center
 Histogram Distribusi Frekuensi Fitur sepal_width
 ```
 
-```{figure} ../image/hist_ptl.png
+```{figure} ../image/hist_ptl.PNG
 ---
 width: 60%
 align: center
@@ -45,14 +45,14 @@ align: center
 Histogram Distribusi Frekuensi Fitur petal_length
 ```
 
-```{figure} ../image/hist_ptw.png
+```{figure} ../image/hist_ptw.PNG
 ---
 width: 60%
 align: center
 ---
 Histogram Distribusi Frekuensi Fitur petal_width
 ```
-```{figure} ../image/hist_sp.png
+```{figure} ../image/hist_sp.PNG
 ---
 width: 60%
 align: center
@@ -78,7 +78,7 @@ Fungsi Scatter Plot:
 3. Mendeteksi outlier (data yang menyimpang jauh dari pola umum).
 4. Membantu analisis regresi atau korelasi. 
 
-```{figure} ../image/sp_spl.png
+```{figure} ../image/sp_spl.PNG
 ---
 width: 60%
 align: center
@@ -87,7 +87,7 @@ Scatter Plot Fitur sepal_length dan sepal width
 ```
 Berdasarkan scatter plot antara sepal_length dan sepal_width, terlihat bahwa nilai korelasi sebesar r = -0,11 menunjukkan hubungan negatif yang sangat lemah. Hal ini berarti peningkatan sepal_length tidak memiliki hubungan linear yang signifikan terhadap perubahan sepal_width.
 
-```{figure} ../image/sp_positif.png
+```{figure} ../image/sp_positif.PNG
 ---
 width: 60%
 align: center
@@ -102,7 +102,7 @@ Outlier adalah nilai data yang menyimpang jauh dari sebagian besar data lainnya 
 
 Ada beberapa metode untuk menentukan Outlier, untuk sekarang saya menggunakan metode Local Outlier Factor untuk menentukan Outliar pada Iris Flower Dataset.
 
-```{figure} ../image/outlier.png
+```{figure} ../image/outlier.PNG
 ---
 width: 60%
 align: center

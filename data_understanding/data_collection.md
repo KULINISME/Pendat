@@ -39,7 +39,7 @@ df = pd.read_csv("../IRIS.csv")
 
 df.head(150)
 ```
-![Grafik Data](../image/data_understanding.png)
+![Grafik Data](../image/data_understanding.PNG)
 
 ```{note} 
 
