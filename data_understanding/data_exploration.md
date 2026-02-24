@@ -1,3 +1,17 @@
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.5
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+---
+
 # Data Exploration
 
 Eksplorasi data (data exploration). Pada tahap ini, data dianalisis menggunakan statistik deskriptif dan visualisasi untuk melihat pola, distribusi, serta hubungan antarvariabel. Eksplorasi ini bertujuan untuk menemukan informasi awal yang tersembunyi dalam data, seperti kecenderungan nilai tertentu, adanya ketidakseimbangan kelas, atau korelasi antarvariabel. Hasil eksplorasi sangat penting karena dapat menjadi dasar dalam menentukan metode analisis atau model yang akan digunakan.
@@ -94,7 +108,21 @@ align: center
 ---
 Scatter Plot Fitur petal_length dan petal_width
 ```
-Berdasarkan scatter plot antara petal_length dan petal_width, terlihat adanya korelasi positif yang sangat kuat dengan nilai r = -0,11. Hal ini menunjukkan bahwa semakin tinggi nilai petal_length, maka petal_width juga cenderung meningkat secara linear.
+Berikut jika diimplementasikan di Python:
+```{code-cell}
+:tags: [hide-input]
+import pandas as pd
+import matplotlib.pyplot as plt
+df=pd.read_csv("../IRIS.csv")
+print("Korelasi petal_length dan petal_width: ",round(df['petal_width'].corr(df['petal_length']), 2))
+plt.scatter(df['petal_length'], df['petal_width'])
+plt.xlabel('petal_length')
+plt.ylabel('petal_width')
+plt.title('Scatter Plot petal_length vs petal_width')
+plt.show()
+
+```
+Berdasarkan scatter plot antara petal_length dan petal_width, terlihat adanya korelasi positif yang sangat kuat dengan nilai koefisien korelasi sebesar r = 0,96. Hal ini menunjukkan bahwa semakin tinggi nilai petal_length, maka petal_width juga cenderung meningkat secara linear. Nilai korelasi yang mendekati 1 mengindikasikan hubungan linear yang sangat kuat antara kedua variabel tersebut.
 
 # Outlier
 
@@ -108,5 +136,29 @@ width: 60%
 align: center
 ---
 Outlier
+```
+```{code-cell} 
+:tags: [hide-input]
+import pandas as pd
+import numpy as np
+from sklearn.neighbors import LocalOutlierFactor
+
+df = pd.read_csv("../IRIS.csv")
+X = df.select_dtypes(include=[np.number]).values
+lof = LocalOutlierFactor(
+    n_neighbors=20,
+    contamination=0.10,
+    metric='euclidean'
+)
+
+y_pred = lof.fit_predict(X)
+df['LOF_Score'] = -lof.negative_outlier_factor_
+df['Outlier'] = y_pred
+
+outlier_lines = list(df[df['Outlier'] == -1].index + 1)
+
+print("Total Outlier:", len(outlier_lines))
+print("Nomor Baris Outlier:")
+print(outlier_lines)
 ```
 Dari metode Local Outlier Factor didapat 15 data sebagai outlier
