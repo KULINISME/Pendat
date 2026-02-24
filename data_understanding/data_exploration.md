@@ -138,7 +138,6 @@ align: center
 Outlier
 ```
 ```{code-cell} 
-:tags: [hide-input]
 import pandas as pd
 import numpy as np
 from sklearn.neighbors import LocalOutlierFactor
