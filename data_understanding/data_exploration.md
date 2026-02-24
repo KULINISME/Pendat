@@ -92,6 +92,8 @@ Fungsi Scatter Plot:
 3. Mendeteksi outlier (data yang menyimpang jauh dari pola umum).
 4. Membantu analisis regresi atau korelasi. 
 
+### Scatter Plot sepal_length dan sepal_width
+
 ```{figure} ../image/sp_spl.PNG
 ---
 width: 60%
@@ -100,6 +102,8 @@ align: center
 Scatter Plot Fitur sepal_length dan sepal width
 ```
 Berdasarkan scatter plot antara sepal_length dan sepal_width, terlihat bahwa nilai korelasi sebesar r = -0,11 menunjukkan hubungan negatif yang sangat lemah. Hal ini berarti peningkatan sepal_length tidak memiliki hubungan linear yang signifikan terhadap perubahan sepal_width.
+
+### Scatter Plot petal dan petal_width
 
 ```{figure} ../image/sp_positif.PNG
 ---
